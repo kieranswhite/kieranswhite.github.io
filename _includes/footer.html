@@ -1,0 +1,154 @@
+<section id="contact">
+    <div class="container" id="i18_link">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="kieranwhite.io.kieranwhite.io">kieranwhite.io</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="team-member wow zoomIn">
+                    <h4><span class="navy">{{ site.kieranwhite.first_name }}</span> {{ site.kieranwhite.last_name }} </h4>
+                    <p>
+                        {{ site.kieranwhite.description }}
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li><a href="https://www.twitter.com/{{ site.author.twitter_username }}" target="blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/{{ site.author.instagram_username }}" target="blank"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p id="jalpc_site_pv"><strong>&copy; 2016 {{ site.title }}</strong></p>
+                <!-- <img src="http://www.reliablecounter.com/count.php?page=www.jack003.com3&digit=style/black-and-white/3/&reloads=0" alt="" title="" border="0">&nbsp;<span data-i18n="link.view">views</span> || -->
+                <!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+                <!-- <span id="busuanzi_container_site_pv"><strong id="busuanzi_value_site_pv"></strong>&nbsp;views.&nbsp;</span>|| -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script async src="{{"static/js/count_page.js"| prepend: site.baseurl }}"></script>
+  <!-- Baidu analytics -->
+  {% if site.ba %}
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?{{ site.ba.uuid }}";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  {% endif %}
+
+  <!-- Google analytics -->
+  {% if site.ga %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ site.ga.id }}', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  {% endif %}
+
+  {% if site.disqus %}
+  <script type="text/javascript">
+      var disqusShortName = "{{ site.disqus.name }}";
+
+      var disqusPublicKey = "{{ site.disqus.public_key }}";
+
+      var urlArray = [];
+      $('.disqus-comment-count').each(function () {
+        var url = $(this).attr('data-disqus-url');
+        urlArray.push('link:' + url);
+      });
+      $.ajax({
+        type: 'GET',
+        url: "https://disqus.com/api/3.0/threads/set.jsonp",
+        data: { api_key: disqusPublicKey, forum : disqusShortName, thread : urlArray },
+        cache: false,
+        dataType: "jsonp",
+        success: function (result) {
+          for (var i in result.response) {
+            var count = result.response[i].posts;
+            if ( count ) {
+              $('.disqus-comment-count[data-disqus-url="' + result.response[i].link + '"]').html(count);
+            }
+          }
+        }
+      });
+  </script>
+  {% endif %}
+  {% if site.changyan %}
+  <script id="cy_cmt_num" src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysfY7ULn"></script>
+  {% endif %}
+  <script>
+
+      $(document).ready(function () {
+
+          $('body').scrollspy({
+              target: '.navbar-fixed-top',
+              offset: 80
+          });
+
+          // Page scrolling feature
+          $('a.page-scroll').bind('click', function(event) {
+              var link = $(this);
+              $('html, body').stop().animate({
+                  scrollTop: $(link.attr('href')).offset().top - 50
+              }, 500);
+              event.preventDefault();
+              $("#navbar").collapse('hide');
+          });
+      });
+
+      var cbpAnimatedHeader = (function() {
+          var docElem = document.documentElement,
+                  header = document.querySelector( '.navbar-default' ),
+                  didScroll = false,
+                  changeHeaderOn = 200;
+          function init() {
+              window.addEventListener( 'scroll', function( event ) {
+                  if( !didScroll ) {
+                      didScroll = true;
+                      setTimeout( scrollPage, 250 );
+                  }
+              }, false );
+          }
+          function scrollPage() {
+              var sy = scrollY();
+              if ( sy >= changeHeaderOn ) {
+                  $(header).addClass('navbar-scroll')
+              }
+              else {
+                  $(header).removeClass('navbar-scroll')
+              }
+              didScroll = false;
+          }
+          function scrollY() {
+              return window.pageYOffset || docElem.scrollTop;
+          }
+          init();
+
+      })();
+
+      // Activate WOW.js plugin for animation on scrol
+      new WOW().init();
+
+  </script>

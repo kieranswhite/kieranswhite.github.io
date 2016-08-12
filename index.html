@@ -1,283 +1,597 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>kieranwhite.io</title>
-
-<link rel="icon" href="http://kieranwhite.io/favicon.ico" />
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top">
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Kieran White</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading">Kieran White</h1>
-                <hr>
-                <p>Big Data Developer / Software Engineer</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">About this site!</h2>
-                    <hr class="light">
-                    <p class="text-faded">This website is an online portfolio / blog for myself (Kieran White). Feel free to take a look around!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+---
+layout: blog
+title: index
+permalink: /
+---
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
                 </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+                        <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
+                        <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
+                        <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">{{ site.landing.career }}</span></a></li>
+                        <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
+                        <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
+                        <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
+                        <li><a class="page-scroll" href="#link"><span data-i18n="nav.conatct">{{ site.landing.link }}</span></a></li>
+                      <!--  <li>
+                            <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                        </li>
+                      -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<section id="about_me" class="features">
+    <div class="container" id="i18_about_me">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="about_me.about_me">About Me</span></h1>
+                <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p> -->
             </div>
         </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Experience</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Hadoop</h3>
-                        <p class="text-muted">Experience with the hadoop ecosystem and tools such as...</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Java</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Web Development</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>DevOps</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+        <div class="row">
+            <!-- python -->
+            <div class="col-xs-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-python"></i>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+            <!-- linux -->
+            <div class="col-xs-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-shell"></i>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+            </div>
+            <!-- avatar -->
+            <div class="col-xs-4">
+                <div class="team-member wow zoomIn">
+                    <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                    <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li><a href="https://www.twitter.com/{{ site.author.twitter_username }}" target="blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/{{ site.author.instagram_username }}" target="blank"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+            </div>
+            <!-- html -->
+            <div class="col-xs-2 wow fadeInRight">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-hadoop"></i>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+            </div>
+            <!-- docker -->
+            <div class="col-xs-2 wow fadeInRight">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-docker"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><span data-i18n="about_me_kieran.des">
+                    I am a Big Data developer with Hadoop, Java and DevOps experience.
+                </span></p>
             </div>
         </div>
-    </aside>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>If you would like to contact me feel free to send me an email and I will get back to you as soon as possible!</p>
+<section id="career" class="timeline features gray-section">
+    <div class="container" id="i18_career">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="career.my_career">My Career</span></h1>
+            </div>
+        </div>
+        <div class="row features-block">
+
+            <div class="col-lg-12">
+                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+                  <!-- uloud -->
+                  <div class="vertical-timeline-block">
+                      <div class="vertical-timeline-icon navy-bg">
+                          <i class="fa fa-plus-square"></i>
+                      </div>
+                      <div class="vertical-timeline-content">
+                          <h2><span data-i18n="career.cap1">Capgemini</span></h2>
+                          <p><span data-i18n="career.cap1_des">I completed my 3 months of training and started my first project, working on public sector using big data technlogies.</span></p>
+                          <span class="vertical-date"><span data-i18n="career.cap1_date"> Dec. 2015 </span><br/> <small><span data-i18n="career.cap1_job">Project</span></small> </span>
+                      </div>
+                  </div>
+                    <!-- uloud -->
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-cloud"></i>
+                        </div>
+                        <div class="vertical-timeline-content">
+                            <h2><span data-i18n="career.cap1">Capgemini</span></h2>
+                            <p><span data-i18n="career.cap1_des">I Joined Capgemini in September 2015 as a Higher Apprentice and begun my 3 months training</span></p>
+                            <span class="vertical-date"><span data-i18n="career.cap1_date"> Sep. 2015 </span><br/> <small><span data-i18n="career.cap1_job">Training</span></small> </span>
+                        </div>
+                    </div>
+                    <!-- student -->
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <div class="vertical-timeline-content">
+                            <h2><span data-i18n="career.school">Finished School</span></h2>
+                            <p><span data-i18n="career.school_des">In June of 2015 I finished my A-levels at school</span></p>
+                            <span class="vertical-date"><span data-i18n="career.school_date"> Jun. 2015 </span><br/> <small><span data-i18n="career.school_job">Student</span></small> </span>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="skills" class="team features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center" id="i18_skills">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="skills.my_skills">My Skills</span></h1>
+            </div>
+        </div>
+        <div class="row features-block">
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Python</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 5%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar">
+                        <span class="sr-only">5% Complete (success)</span>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:your-email@your-domain.com">kieranwhite06@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>HTML</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Hadoop</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Javascript</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 15%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">15% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Spark</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 15%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">15% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>SQL</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">80% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Docker</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 15%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">15% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Jenkins</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 25%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                        <span class="sr-only">25% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Linux/Shell</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                        <span class="sr-only">70% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+              <p>Java</p>
+            </div>
+            <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="progress progress-bar-default">
+                    <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section id="project" class="project gray-section features">
+    <div class="container" id="i18_projects">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="projects.my_projects">My Projects</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 wow fadeInLeft">
+                <div class="team-member">
+                    <a href="{{ site.project.hadoopapps.url | prepend: 'https://github.com'}}"><img src="{{ site.project.hadoopapps.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt=""></a>
+                            <a href="{{ site.project.hadoopapps.url | prepend: 'https://github.com'}}"><h4><span class="navy">{{ site.project.hadoopapps.name }}</span></h4></a>
+                    <p><span data-i18n="projects.hadoopapps">hadoopapps is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.</span></p>
+                    <ul class="list-inline">
+                        <li>
+                            <a class="github-button" href="{{ site.project.hadoopapps.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.hadoopapps.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.hadoopapps.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.hadoopapps.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.hadoopapps.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.hadoopapps.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-4 wow">
+                <div class="team-member">
+                  <a href="{{ site.project.website.url | prepend: 'https://github.com'}}"><img src="{{ site.project.website.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt=""></a>
+                  <a href="{{ site.project.website.url | prepend: 'https://github.com'}}"><h4><span class="navy">{{ site.project.website.name }}</span></h4></a>
+                    <p><span data-i18n="projects.website">website is a simple, beautiful and swift theme for Jekyll. It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.</span></p>
+                    <ul class="list-inline">
+                        <li>
+                            <a class="github-button" href="{{ site.project.website.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.website.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.website.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.website.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.website.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.website.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-4 wow fadeInRight">
+                <div class="team-member">
+                  <a href="{{ site.project.euref.url | prepend: 'https://github.com'}}"><img src="{{ site.project.euref.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt=""></a>
+                <a href="{{ site.project.euref.url | prepend: 'https://github.com'}}"><h4><span class="navy">{{ site.project.euref.name }}</span></h4></a>
+                    <p><span data-i18n="projects.euref">It is a web font application written by euref and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.</span></p>
+                    <ul class="list-inline">
+                        <li>
+                            <a class="github-button" href="{{ site.project.euref.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.euref.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.euref.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.euref.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.euref.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.euref.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <br>
+</section>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+<section id="blog" class="navy-section testimonials" style="margin-top: 0">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
+                <br><br><br>
+                <a class="btn btn-lg btn-default btn-rounded btn-outline" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+</section>
 
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+<section id="link" class="contact features">
+    <div class="container" id="i18_link">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="kieranwhite.io.kieranwhite.io">kieranwhite.io</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="team-member wow zoomIn">
+                    <h4><span class="navy">{{ site.kieranwhite.first_name }}</span>{{ site.kieranwhite.last_name }} </h4>
+                    <p>
+                        {{ site.kieranwhite.description }}
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li><a href="https://www.twitter.com/{{ site.author.twitter_username }}" target="blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/{{ site.author.instagram_username }}" target="blank"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p id="jalpc_site_pv"><strong>&copy; 2016 {{ site.title }}</strong></p>
+                <!-- <img src="http://www.reliablecounter.com/count.php?page=www.jack003.com3&digit=style/black-and-white/3/&reloads=0" alt="" title="" border="0">&nbsp;<span data-i18n="link.view">views</span> || -->
+                <!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+                <!-- <span id="busuanzi_container_site_pv"><strong id="busuanzi_value_site_pv"></strong>&nbsp;views.&nbsp;</span>|| -->
+            </div>
+        </div>
+    </div>
+</section>
 
-</body>
 
-</html>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function(event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+    // Activate WOW.js plugin for animation on scrol
+    new WOW().init();
+
+</script>
+
+<script>
+
+    $(document).ready(function (){
+
+        $.i18n.init({
+            resGetPath: 'static/locales/__lng__.json',
+            load: 'unspecific',
+            fallbackLng: false,
+            lng: 'en'
+        }, function (t){
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_career').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+        });
+
+        $('.set_en').on('click', function (){
+            i18n.setLng('en', function(){
+                $('.i18container').i18n();
+                // $('#i18_title').i18n();
+                $('#i18_navbar').i18n();
+                $('#i18_about_me').i18n();
+                $('#i18_skills').i18n();
+                $('#i18_projects').i18n();
+                $('#i18_career').i18n();
+                $('#i18_blog').i18n();
+                $('#i18_link').i18n();
+
+                // $('.set_en').addClass('active');
+                // $('.set_cn').removeClass('active');
+            });
+        });
+
+        $('.set_cn').on('click', function (){
+            i18n.setLng('cn', function(){
+                $('.i18container').i18n();
+                // $('#i18_title').i18n();
+                $('#i18_navbar').i18n();
+                $('#i18_about_me').i18n();
+                $('#i18_skills').i18n();
+                $('#i18_projects').i18n();
+                $('#i18_career').i18n();
+                $('#i18_blog').i18n();
+                $('#i18_link').i18n();
+
+                // $('.set_cn').addClass('active');
+                // $('.set_en').removeClass('active');
+            });
+        });
+
+    });
+
+</script>

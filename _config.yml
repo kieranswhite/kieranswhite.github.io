@@ -1,0 +1,104 @@
+# Welcome to Jekyll!
+
+# Website settings
+title: "kieranwhite.io"
+description: "Kieran's,use Jekyll and github pages."
+keywords: "Kieran,blog,Jekyll,github,gh-pages"
+
+baseurl: "/"
+#url: "http://kieranwhite.io"
+url: "http://127.0.0.1:4000"
+
+# author
+author:
+  name: 'Kieran'
+  first_name: 'Kieran'
+  last_name: 'White'
+  email: 'kieranwhite06@gmail.com'
+  facebook_username: 'kieranswhite'
+  instagram_username: 'kieranswhite'
+  twitter_username: 'kieransw96'
+  github_username: 'kieranswhite'
+  head_img: 'static/img/landing/kieran2.png'
+
+# social link
+kieranwhite:
+  first_name: 'Kieran'
+  last_name: 'White'
+  description: 'Developer.'
+  link: 'http://kieranwhite.io'
+  email: 'kieranwhite06@gmail.com'
+
+# landing page
+landing:
+  home: 'Home'
+  about: 'About'
+  career: 'Career'
+  skills: 'Skills'
+  projects: 'Project'
+  blog: 'Blog'
+  link: 'Contact'
+
+# my projects
+project:
+  hadoopapps:
+    name: 'HadoopApps'
+    url: '/kieranswhite996/hadoopapps'
+    img: 'static/img/landing/Hadoop2.png'
+  website:
+    name: 'kieranwhite.io'
+    url: '/kieranswhite996/kieranswhite996'
+    img: 'static/img/landing/jekyll.jpg'
+  euref:
+    name: 'euref'
+    url: '/kieranswhite/eureftwitter'
+    img: 'static/img/landing/angularjs.jpg'
+
+# blog index
+index:
+  home: 'Home'
+  # python: 'Python'
+  # linux: 'Linux'
+  # html: 'HTML'
+  # database: 'Database'
+  # mac: 'Mac'
+  # life: 'Life'
+
+# donate
+donate:
+  wechat: 'static/img/pay/wechat.png'
+  alipay: 'static/img/pay/alipay.png'
+
+# comment
+changyan:
+  # appid: cysfY7ULn
+  # conf: prod_861928934cecb7a18e15bedaed9dae29
+disqus:
+  name: kieranw
+  public_key: yy3zuzKseCLIoYyGFBkHm3jzEcCfFxl2Xyk9LJI3A9KrkvU5GEPuOqdmMY1LJba6
+#tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
+
+# share
+bshare:
+  uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
+
+# baidu analytics
+ba:
+  uuid: 317acca9ef9255b934e46371e471431d
+
+# google analytics
+ga:
+  id: UA-73784599-1
+
+# blog img path
+img_path: '/static/img/blog'
+
+# Build settings
+encoding: "utf-8"
+
+# other settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
