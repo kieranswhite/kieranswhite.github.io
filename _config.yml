@@ -7,7 +7,8 @@ keywords: "Kieran,blog,Jekyll,github,gh-pages"
 
 baseurl: "/"
 #url: "http://kieranwhite.io"
-url: "http://127.0.0.1:4000"
+url: http://kieranwhite.io
+enforce_ssl: kieranwhite.io
 
 # author
 author:
